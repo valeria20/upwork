@@ -7,7 +7,7 @@ var AdvancedFilters=function(){
         advancedFilters.click();
     };
    
-    var searchRussianWebDevelopers=function(searchedLocation){
+    this.searchRussianWebDevelopers=function(searchedLocation){
         searchLocationsInput.click().sendKeys(searchedLocation)
         .sendKeys(protractor.Key.ENTER);
         updateFilters.click();

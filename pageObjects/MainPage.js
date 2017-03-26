@@ -1,9 +1,9 @@
 
 var MainPage=function () {
     var findFreelancersInput=element(by.model('query'));
-    var urlToGo='https://www.upwork.com/';
+    var urlToGo="https://www.upwork.com/";
     this.openSite=function (urlToGo) {
-        browser.get(urlToGo);
+        browser.driver.get(urlToGo);
     };
 
     this.findAllWebDevelopers=function(searchedFreelancers){
