@@ -2,8 +2,8 @@ var MainPage=requre('./PageObject/MainPage.js');
 var AdvancedFilters=requre('./PageObject/AdvancedFilters');
 describe('test filter of www.upwork.com', function(){
     it('dearch for russian web developers', function(){
-        var mainPage=new MainPage();
-        var andvancedFilters=new andvancedFilters();
+        var mainPage=new PageObject.MainPage();
+        var andvancedFilters=new PageObject.AndvancedFilters();
         var searchedFreelancers="Web Developers";
         var searchedLocation="Russia";
         mainPage.get();
