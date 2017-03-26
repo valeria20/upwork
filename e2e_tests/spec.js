@@ -7,6 +7,7 @@ describe('test filter of www.upwork.com', function(){
         var andvancedFilters=new PageObject.AndvancedFilters();
         var searchedFreelancers="Web Developers";
         var searchedLocation="Russia";
+		var expectedLocation="Russia";
         mainPage.get();
         /**
          * input to 'Find Freelancers' field 'Web Developers'
