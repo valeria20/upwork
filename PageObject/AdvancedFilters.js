@@ -3,7 +3,7 @@ var AdvancedFilters=function(){
     var searchLocationsInput=element(by.css("#location-search"));
     var updateFilters=element(by.xpath(".//*[@id='oContractorFacets']//button[@class='btn btn-primary m-0']"));
     
-    var goToAdvancedfilters=function(){
+    this.goToAdvancedfilters=function(){
         advancedFilters.click();
     };
    
