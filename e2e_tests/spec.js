@@ -1,5 +1,6 @@
 var MainPage = require('../pageObjects/MainPage.js');
 var AdvancedFilters = require('../pageObjects/AdvancedFilters.js');
+var urlToGo='https://www.upwork.com/';
 describe('test filter of www.upwork.com', function () {
 var mainPage = new MainPage();
 var advancedFilters = new AdvancedFilters();
@@ -8,7 +9,7 @@ it('dearch for russian web developers', function () {
 var searchedFreelancers = "Web Developers";
 var searchedLocation = "Russia";
 var expectedLocation = "Russia";
-mainPage.openSite();
+mainPage.openSite(urlToGo);
 
 mainPage.findAllWebDevelopers(searchedFreelancers);
 advancedFilters.goToAdvancedfilters();
