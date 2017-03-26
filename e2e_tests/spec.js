@@ -16,8 +16,9 @@ advancedFilters.goToAdvancedfilters();
 advancedFilters.searchRussianWebDevelopers(searchedLocation);
 
 var locations = element.all(by.xpath(".//*[@id='oContractorResults']//div[@class='no-wrap ellipsis']"));
-for (realLocation in locations) {
+locations.then(function(locations){for (realLocation in locations) {
 expect(realLocation.getText()).ToEqual(expectedLocation);
 }
+});
 });
 });
