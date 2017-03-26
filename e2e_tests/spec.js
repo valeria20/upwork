@@ -8,7 +8,7 @@ it('dearch for russian web developers', function () {
 var searchedFreelancers = "Web Developers";
 var searchedLocation = "Russia";
 var expectedLocation = "Russia";
-mainPage.get();
+mainPage.openSite();
 
 mainPage.findAllWebDevelopers(searchedFreelancers);
 advancedFilters.goToAdvancedfilters();

@@ -2,7 +2,7 @@
 var MainPage=function () {
     var findFreelancersInput=element(by.model('query'));
     var urlToGo='https://www.upwork.com/';
-    this.get=function (urlToGo) {
+    this.openSite=function (urlToGo) {
         browser.get(urlToGo);
     };
 
