@@ -1,6 +1,6 @@
 var MainPage=requre('./PageObject/MainPage.js');
-var AdvancedFilters=requre('./PageObject/AdvancedFilters');
-var PageObject = require('require.all')('./PageObject');
+var AdvancedFilters=requre('./PageObject/AdvancedFilters.js');
+var PageObject=requre('./PageObject');
 describe('test filter of www.upwork.com', function(){
     it('dearch for russian web developers', function(){
         var mainPage=new PageObject.MainPage();
