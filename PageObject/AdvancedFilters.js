@@ -13,3 +13,4 @@ var AdvancedFilters=function(){
         updateFilters.click();
     };
 };
+module.exports=AdvancedFilters;

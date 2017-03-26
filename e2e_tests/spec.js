@@ -1,3 +1,5 @@
+var MainPage=requre('./PageObject/MainPage.js');
+var AdvancedFilters=requre('./PageObject/AdvancedFilters');
 describe('test filter of www.upwork.com', function(){
     it('dearch for russian web developers', function(){
         var mainPage=new MainPage();
@@ -15,6 +17,13 @@ describe('test filter of www.upwork.com', function(){
          * search russian Web Developers
          * @param {string} searchedLocation - country where web developers are located
          */
-        advancedFilters.searchRussianWebDevelopers(searchedLocation); 
+        advancedFilters.searchRussianWebDevelopers(searchedLocation);
+        /**
+         * list of location elements
+         */
+        var locations=element.all(by.xpath(".//*[@id='oContractorResults']//div[@class='no-wrap ellipsis']"));                    
+        for(realLocation in locations){
+            expect(realLocation.getText()).ToEqual(expectedLocation);
+        }
     });
 });

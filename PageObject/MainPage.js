@@ -8,5 +8,8 @@ var AdvancedFilters=function(){
     var searchRussianWebDevelopers=function(){
         searchLocationsInput.click().sendKeys(searchedLocation)
     };
-
 };
+var AdvancedFilters=function(){
+    
+};
+module.exports=MainPage;
