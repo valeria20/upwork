@@ -9,7 +9,7 @@ var urlToGo = 'https://www.upwork.com/';
 describe('test filter of www.upwork.com', function () {
     var mainPage = new MainPage();
     var advancedFilters = new AdvancedFilters();
-    it('should search for russian web developers', function () {
+    it('should that web developers from Russia we searched for is reallu from Russia', function () {
         var searchedFreelancers = "Web Developers";
         var searchedLocation = "Russia";
         var expectedLocation = "Russia";
@@ -29,7 +29,8 @@ describe('test filter of www.upwork.com', function () {
          */
         advancedFilters.searchRussianWebDevelopers(searchedLocation);
         /**
-         * locations - collection of elements that view the location of the web developer
+         * locations - collection of  elements that view the location 
+         * of the web developer we were serched for
          */
         advancedFilters.checkLocation();
     });

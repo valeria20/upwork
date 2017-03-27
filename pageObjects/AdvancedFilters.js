@@ -7,14 +7,13 @@ var AdvancedFilters = function () {
         "-bottom p-0-left-right p-xs-top-bottom']"));
     var searchLocationsInput = element(by.css("#location-search"));
     var updateFilters = element(by.xpath(".//*[@id='oContractorFacets']//button[@class='btn btn-primary m-0']"));
-    var locations = element.all(by.xpath(".//*[@id='oContractorResults']//div[@data-country='Russia']"));
+    var russiaLocations = element.all(by.xpath(".//*[@id='oContractorResults']//div[@data-country='Russia']"));
     var expectedLocation="Russia";
 
     this.goToAdvancedFilters = function () {
         advancedFilters.click();
     };
     /**
-     * @method searchRussianWebDevelopers - input to advanced filter location we should to find
      * @param searchedLocation - country where web developers are located
      */
     this.searchRussianWebDevelopers = function (searchedLocation) {
@@ -24,9 +23,12 @@ var AdvancedFilters = function () {
             .sendKeys(protractor.Key.ENTER);
         updateFilters.click();	
     };
-
+    /**
+     * method checks that list of locations of web developers
+     * is correct according  the country we were searched for
+     */
     this.checkLocation = function () {
-        var location = locations.getText();
+        var location = russiaLocations.getText();
         location.then(function (data) {
             data
                 .map(function (data) {
