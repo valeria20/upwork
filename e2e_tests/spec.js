@@ -16,7 +16,7 @@ describe('test filter of www.upwork.com', function () {
         /**
          * @param {string} urlToGo - url of web site under test
          */
-         mainPage.openSite(urlToGo);
+        mainPage.openSite(urlToGo);
         /**
          * @method findAllWebDevelopers - input to 'Find Freelancers' field 'Web Developers'
          * @param {string} searchedFreelancers - freelancers we should find
@@ -31,11 +31,6 @@ describe('test filter of www.upwork.com', function () {
         /**
          * locations - collection of elements that view the location of the web developer
          */
-        var locations=element.all(by.xpath(".//*[@id='oContractorResults']//div[@class='no-wrap ellipsis']"));
-        locations.then(function (data) {
-            for (var realLocation in data) {     
-            expect(realLocation.getText()).toEqual(expectedLocation);  
-            }
-        });
+        advancedFilters.checkLocation();
     });
 });

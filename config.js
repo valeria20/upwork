@@ -1,4 +1,3 @@
-
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -16,5 +15,4 @@ exports.config = {
         showColors: true,
         defaultTimeoutInterval: 30000
     }
-    
 };
