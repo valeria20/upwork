@@ -1,16 +1,23 @@
-var AdvancedFilters=function(){
-    var advancedFilters=element(by.xpath(".//*[@id='oContractorFacets']//button[@class='btn btn-link m-md-top m-0-left m-0-bottom p-0-left-right p-xs-top-bottom']"));
-    var searchLocationsInput=element(by.css("#location-search"));
-    var updateFilters=element(by.xpath(".//*[@id='oContractorFacets']//button[@class='btn btn-primary m-0']"));
-    
-    this.goToAdvancedfilters=function(){
+/**
+ * @author Valeria 27.03.2017
+ * description of the page contains advanced filter
+ */
+var AdvancedFilters = function () {
+    var advancedFilters = element(by.xpath(".//*[@id='oContractorFacets']//button[@class='btn btn-link m-md-top m-0-left m-0-bottom p-0-left-right p-xs-top-bottom']"));
+    var searchLocationsInput = element(by.css("#location-search"));
+    var updateFilters = element(by.xpath(".//*[@id='oContractorFacets']//button[@class='btn btn-primary m-0']"));
+
+    this.goToAdvancedFilters = function () {
         advancedFilters.click();
     };
-   
-    this.searchRussianWebDevelopers=function(searchedLocation){
+    /**
+     * @method searchRussianWebDevelopers - input to advanced filter location we should to find
+     * @param searchedLocation - country where web developers are located
+     */
+    this.searchRussianWebDevelopers = function (searchedLocation) {
         searchLocationsInput.click().sendKeys(searchedLocation)
-        .sendKeys(protractor.Key.ENTER);
+            .sendKeys(protractor.Key.ENTER);
         updateFilters.click();
     };
 };
-module.exports=AdvancedFilters;
+module.exports = AdvancedFilters;
